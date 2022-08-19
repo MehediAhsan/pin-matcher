@@ -38,3 +38,19 @@ document.getElementById('calculator').addEventListener('click', function(event){
         typedNumbersField.value = newTypedNumber;
     }
 });
+
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+    const pin = document.getElementById('display-pin').value;
+    const number = document.getElementById('typed-numbers').value;
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailureMessage = document.getElementById('pin-failure');
+    if(pin === number){
+        pinSuccessMessage.style.display='block';
+        pinFailureMessage.style.display='none';
+    }
+    else{
+        pinFailureMessage.style.display='block';
+        pinSuccessMessage.style.display='none';
+    }
+})
